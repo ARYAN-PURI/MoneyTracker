@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./logo.png">
+    <title>Money Tracker</title>
+</head>
+<body>
+    <h2 class="head"><img class="logo" src="./images/logo.png">Your Money Tracker</h2>
+    <div id="frms">
+        <div>
+            <h2>Add Expense</h2>
+            <form action="http://localhost:5000/storeexpense" method="POST">
+                <div><label for="etitle">Enter Expense Title:</label><input type="text" placeholder="Expense Title" required name="etitle" id="etitle"></div>
+                <div><label for="edate">Enter Expense Date:</label><input type="date" placeholder="Expense Date" required name="edate" id="edate"></div>
+                <div><label for="eamount">Enter Expense Amount:</label><input type="number" placeholder="Expense Amount" required name="eamount" id="eamount"></div>
+                <div class="btns"><input type="submit" value="Add Expense" class="btn"></div>
+            </form>
+        </div>
+        <div>
+            <h2>Add Income</h2>
+            <form action="http://localhost:5000/storeincome" method="POST">
+                <div><label for="ititle">Enter Expense Title:</label><input type="text" placeholder="Income Title" required name="ititle" id="ititle"></div>
+                <div><label for="idate">Enter Expense Date:</label><input type="date" placeholder="Income Date" required name="idate" id="idate"></div>
+                <div><label for="iamount">Enter Expense Amount:</label><input type="number" placeholder="Income Amount" required name="iamount" id="iamount"></div>
+                <div class="btns"><input type="submit" value="Add Income" class="btn"></div>
+            </form>
+        </div>
+        
+    </div>
+    
+    <h2>The Records Are</h2>
+    <div style="display: flex;justify-content: center;"><div class="heading"><span class="title">Title</span> <span class="date">Date</span> <span class="amount">Amount</span><span class="amount">Action</span></div></div>
+    <div id="records">
+        <div class="blank">
+    </div>
+    <h2>The Total Earning is:<span id="earning">0</span></h2>
+    <script src="index.js"></script>
+</body>
+</html>

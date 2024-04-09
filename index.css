@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: whitesmoke;
+}
+#frms{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    row-gap: 10px;
+}
+input{
+    padding:3px 15px;
+}
+form>div{
+    margin:10px 0px;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delbtn,.btn{
+    padding:5px 10px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.delbtn:hover{
+    cursor: pointer;
+}
+.btn:hover{
+    cursor: pointer;
+}
+h2{
+    text-align: center;
+}
+#records{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.expense,.income,.heading{
+    padding:5px 20px;
+    margin:5px 0px;
+    border-radius: 5px;
+    width:50vw;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.title,.date,.amount{
+    font-weight: bold;
+    font-size: medium;
+    text-transform: capitalize;
+}
+.expense{
+    background-color: rgb(255, 95, 95);
+}
+.income{
+    background-color: rgb(2, 234, 2);
+}
+.loss{
+    color: rgb(255, 95, 95);
+}
+.profit{
+    color: rgb(2, 234, 2);
+}
+@media only screen and (max-width:750px) and (min-width:480px) {
+    .expense,.income,.heading{
+        width:70vw;
+    }
+}
+.logo{
+    width:30px;
+    border:50%;
+}
+.head{
+    background-color: whitesmoke;
+    position: sticky;
+    top:0px;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0px 2px 10px;
+    margin-bottom: 20px;
+}
+@media only screen and (max-width:480px) and (min-width:360px) {
+    .expense,.income,.heading{
+        width:90vw;
+    }
+}
+@media only screen and (max-width:360px){
+    .expense,.income,.heading{
+        width:95vw;
+        padding:5px 5px;
+    }
+    input{
+        padding:3px 8px;
+    }
+}
+
